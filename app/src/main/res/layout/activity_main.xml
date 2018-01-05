@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lexkde.ns007.opencvtest1.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_bt_device"
+        android:text="连接蓝牙"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="舵机控制器未连接......"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/warning"
+        android:layout_alignBaseline="@id/connect_bt_device"
+        android:id="@+id/connection_status"
+        />
+
+    <ImageView
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#444444"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/connect_bt_device"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/servo_calibration"
+        android:layout_below="@id/divider_1"
+        android:text="Calibration"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/battery_power_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_1"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/servo_calibration"
+        android:layout_alignBaseline="@id/servo_calibration"
+        android:text="Battery Power: 0000 mV"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/servo_tracking"
+        android:text="Tracking"
+        android:layout_below="@id/divider_1"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"/>
+
+    <ImageView
+        android:id="@+id/divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#444444"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/servo_calibration"
+        />
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_2"
+        android:visibility="gone"
+        android:id="@+id/OpenCvView1"
+        app:show_fps="true"
+        app:camera_id="front"
+        />
+
+
+</RelativeLayout>
