@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lexkde.ns007.opencvtest1.VideoActivity">
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <org.opencv.android.JavaCameraView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,23 +20,61 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calibration"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"/>
+            android:text="Up"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/servo_up"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="record"
+            android:text="Down"
+            android:id="@+id/servo_down"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/servo_up"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left"
+            android:id="@+id/servo_left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/servo_down"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right"
+            android:id="@+id/servo_right"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/servo_left"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calibration"
             android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"/>
+            android:layout_alignParentLeft="true"
+            android:id="@+id/servo_calibration"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="initial"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/servo_initial"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tracking"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"
+            android:id="@+id/servo_tracking"/>
     </RelativeLayout>
-</FrameLayout>
 </RelativeLayout>
